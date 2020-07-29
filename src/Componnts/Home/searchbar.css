@@ -1,0 +1,10 @@
+form{
+    padding:15px
+    
+}
+
+input{
+    min-width: 18em;
+    min-height: 2em;
+    border-radius: 30px;
+}
