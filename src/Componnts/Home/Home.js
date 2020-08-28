@@ -3,34 +3,37 @@ import Item from './Item';
 import { StoreContext } from '../../StoreContext'
 import SearchBar from './SearchBar'
 import Logo from '../Logo/Logo'
+import gundamUnits from '../../gundum'
  
 
 export default class Home extends Component {
   
-
+  
   static contextType = StoreContext
 
   state={
-    items:this.context.inventory
+    inventory:[]
   }
 
   componentDidMount(){
-
+    fetch('http://localhost:8000/inventory')
+              .then(response => response.json())
+              .then(data => this.setState({ inventory: data }))
   }
 
-
     render() {
-      // console.log(this.context.items)
+      console.log(this.state.items)
+      console.log(this.context.inventory)
 
 
-      const listedItem = this.state.items.map(item => (
+      const listedItem = this.state.inventory.map(item => (
         <Item 
         key={item.gundamId}
         id={item.gundamId}
-        image={item.image}
+        image={item.itemimage}
         price={item.price}
         itemName={item.name.toUpperCase()}
-        description={item.catagory}
+        description={item.description}
          />
     ))
         return (
@@ -38,7 +41,7 @@ export default class Home extends Component {
               <Logo />
               <SearchBar />
               {listedItem}
-              <h2>random</h2>
+              
           </div>
         )
     }

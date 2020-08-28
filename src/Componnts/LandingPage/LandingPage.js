@@ -3,6 +3,9 @@ import Header from './Header'
 import { Link } from "react-router-dom";
 
 export default class LandingPage extends Component {
+
+    
+
     render() {
         return (
             <div>  
@@ -10,8 +13,6 @@ export default class LandingPage extends Component {
                 <Link to={'/home'}>HOME</Link>
                 <br/>
                 <Link to={"/login"}>Login</Link>
-                <br/>
-                <Link to={"/sign-up"}>sign-Up</Link>
             </div>
         )
     }
