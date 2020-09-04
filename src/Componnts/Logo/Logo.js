@@ -5,7 +5,7 @@ export default class Logo extends Component {
     render() {
         return (
             <div>
-                <h1>
+                <h1 class='logo'>
                     FALLEN ZERO <br/> GUNDAM STORE
                 </h1>
                 

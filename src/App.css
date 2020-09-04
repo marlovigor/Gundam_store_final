@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-image:url('https://images.wallpapersden.com/image/download/gundam-robots-fight_66750_3840x2160.jpg');
+  /* background-image:url('https://wallup.net/wp-content/uploads/2017/10/24/473226-Gundam_Wing-Gundam.jpg'); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,3 +33,232 @@
   color: #61dafb;
 }
 
+
+@media screen and (min-width:120px){
+
+  .cartButton{
+    color:white;
+    border-radius: 15px;
+    background-color: skyblue;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 8px;
+    width: 80px;
+  }
+  .loginButton{
+    color:white;
+    border-radius: 15px;
+    background-color: skyblue;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 8px;
+    width: 80px;
+  }
+  .homeDiv{
+     
+        width:90%;
+        margin:10px;
+       
+    
+        
+    }
+
+    .homeItemDiv{
+      width: 50%;
+      
+      margin:0 auto;
+      margin-top:20px;
+      border-color:rgb(247, 247, 247);
+      border-style:solid;
+      background-color: rgb(84, 196, 237);
+      border-radius: 30px;
+      padding:20px;
+    }
+
+  .addButton{
+    color:white;
+    border-radius: 15px;
+    background-color: skyblue;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 8px;
+    width: 80px;
+  }
+  
+  .buttonDiv{
+    width:60%;
+    /* border-color:rgb(199, 28, 28);
+    border-style:solid; */
+  }
+ 
+  
+  }
+  
+  @media screen and (min-width:480px){
+    .homeDiv{
+     
+      width:90%;
+      margin:10px;
+     
+  
+      
+  }
+
+  .homeItemDiv{
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+    /* margin:20px; */
+    width: 30%;
+    min-height: 350px;
+    /* margin:0 auto; */
+    margin:20px;
+    border-color:rgb(247, 247, 247);
+    border-style:solid;
+    background-color: rgb(84, 196, 237);
+    border-radius: 30px;
+    padding:20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+  /* .homeItemDiv{
+    margin-top: 20px;
+    margin:0 auto;
+    margin:20px;
+    border-color:rgb(247, 247, 247);
+    border-style:solid;
+    width:10rem;
+    background-color: rgb(84, 196, 237);
+    border-radius: 30px;
+    padding: 15px;
+    min-height: 300px;
+
+
+  } */
+
+/* 
+  .homeItemDiv{
+    margin:20px;
+    width: 80%;
+    margin:0 auto;
+    border-color:rgb(16, 218, 124);
+    border-style:solid;
+  } */
+    
+    /* .itemContainer{
+        margin-top: 20px;
+        border-color:rgb(247, 247, 247);
+        border-style:solid;
+        width:10rem;
+        background-color: rgb(219, 227, 230);
+        border-radius: 30px;
+        padding: 15px;
+        min-height: 300px;
+    
+    
+    } */
+    
+    .images{
+        max-width: 120px;
+        min-height: 160px;
+    }
+    
+    .itemName{
+        font-size: 1.5em;
+    }
+
+    .buttonInnerDiv{
+      /* border-color:rgb(28, 199, 96);
+      border-style:solid; */
+      width:60%;
+      float: right;
+  
+    }
+  
+
+}
+
+@media screen and (min-width:868px){
+
+  .homeDiv{
+ 
+   width:80%;
+    margin:10px;
+   
+
+    
+}
+
+.homeItemDiv{
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+  /* margin:20px; */
+  width: 30%;
+  min-height: 350px;
+  /* margin:0 auto; */
+  margin:20px;
+  /* border-color:rgb(176, 23, 23);
+  border-style:solid; */
+  background-color: rgb(84, 196, 237);
+  border-radius: 30px;
+  padding:20px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+/* .homeItemDiv{
+  margin-top: 20px;
+  margin:0 auto;
+  margin:20px;
+  border-color:rgb(247, 247, 247);
+  border-style:solid;
+  width:10rem;
+  background-color: rgb(84, 196, 237);
+  border-radius: 30px;
+  padding: 15px;
+  min-height: 300px;
+
+
+} */
+
+/* 
+.homeItemDiv{
+  margin:20px;
+  width: 80%;
+  margin:0 auto;
+  border-color:rgb(16, 218, 124);
+  border-style:solid;
+} */
+  
+  /* .itemContainer{
+      margin-top: 20px;
+      border-color:rgb(247, 247, 247);
+      border-style:solid;
+      width:10rem;
+      background-color: rgb(219, 227, 230);
+      border-radius: 30px;
+      padding: 15px;
+      min-height: 300px;
+  
+  
+  } */
+  
+  .images{
+      max-width: 120px;
+      min-height: 160px;
+  }
+  
+  .itemName{
+      font-size: 1.5em;
+  }
+
+  .buttonInnerDiv{
+    /* border-color:rgb(28, 199, 96);
+    border-style:solid; */
+    width:40%;
+    float: right;
+
+  }
+
+
+}

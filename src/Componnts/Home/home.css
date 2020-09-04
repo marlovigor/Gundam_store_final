@@ -1,0 +1,102 @@
+*{
+    margin:0
+}
+
+
+@media screen and (min-width:120px) {
+.homeDiv{
+    /* border-color:rgb(218, 16, 16);
+    border-style:solid; */
+    width:100px
+
+    
+}
+
+.itemContainer{
+    /* margin-top: 20px;
+    margin:0 auto;
+    border-color:rgb(247, 247, 247);
+    border-style:solid;
+    width:10rem;
+    background-color: rgb(84, 196, 237);
+    border-radius: 30px;
+    padding: 15px;
+    min-height: 300px; */
+
+
+}
+
+.images{
+    max-width: 120px;
+    min-height: 160px;
+}
+
+.itemName{
+    font-size: 70%
+}
+}
+
+
+@media screen and (min-width:480px){
+     /* .itemContainer{
+        margin-top: 20px;
+        margin:0 auto;
+        margin:15%;
+        border-color:rgb(247, 247, 247);
+        border-style:solid;
+        width:10rem;
+        background-color: rgb(84, 196, 237);
+        border-radius: 30px;
+        padding: 15px;
+        min-height: 300px; */
+
+        /* make the blue line container the item container  */
+    
+    
+    /* } */
+     
+    .images{
+        max-width: 120px;
+        min-height: 160px;
+    }
+    
+    /* .itemName{
+        color:green;
+        font-size: 20px;
+    } */
+
+
+}
+
+
+
+@media screen and (min-width:868px){
+    /* .itemContainer{
+       margin-top: 20px;
+       margin:0 auto;
+       margin:15%;
+       border-color:rgb(247, 247, 247);
+       border-style:solid;
+       width:10rem;
+       background-color: rgb(84, 196, 237);
+       border-radius: 30px;
+       padding: 15px;
+       min-height: 300px; */
+
+       /* make the blue line container the item container  */
+   
+   
+   /* } */
+    
+   .images{
+       max-width: 120px;
+       min-height: 160px;
+   }
+   
+   /* .itemName{
+       color:green;
+       font-size: 10rem;
+   } */
+
+
+}

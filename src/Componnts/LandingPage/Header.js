@@ -6,7 +6,7 @@ export default class Header extends Component {
             <div>
                 <div>
                     <header className="App-header">
-                        <h1>Fallen Gundam</h1>
+                        <h1 class={'logo-title'}>Fallen Gundam Store</h1>
                     </header>
                 </div>
             </div>

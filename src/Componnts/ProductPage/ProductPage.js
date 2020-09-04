@@ -8,16 +8,20 @@ import ProductPageItem from './ProductPageItem'
 export default function ProductPage() {
     const value = useContext(StoreContext);
     const { itemID } = useParams();
-    const filteredItem = value.inventory.find(item => item.gundamId == itemID)
+    const filteredItem = value.inventory.find(item => item.id == itemID)
+    if(filteredItem === undefined) return ''
+    // console.log(filteredItem)
     
     return (
         <div>
             <ProductPageItem 
-             image={filteredItem.image}
+             image={filteredItem.itemimage}
              itemName={filteredItem.name}
              price={filteredItem.price}
             />
         </div>
     )
 }
+
+// suggest taking the matching data and macking a api pull
 

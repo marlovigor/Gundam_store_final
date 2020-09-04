@@ -1,45 +1,53 @@
 import React, { Component } from 'react'
+import './home.css'
 import Item from './Item';
 import { StoreContext } from '../../StoreContext'
-import SearchBar from './SearchBar'
 import Logo from '../Logo/Logo'
- 
+import gundamUnits from '../../gundum'
+
+
 
 export default class Home extends Component {
-  
+
 
   static contextType = StoreContext
 
-  state={
-    items:this.context.inventory
+  state = {
+    inventory: []
   }
 
-  componentDidMount(){
-
+  componentDidMount() {
+    fetch('http://localhost:8000/inventory')
+      .then(response => response.json())
+      .then(data => this.setState({ inventory: data }))
   }
 
+  render() {
+    console.log(this.state.items)
+    console.log(this.context.inventory)
 
-    render() {
-      // console.log(this.context.items)
 
-
-      const listedItem = this.state.items.map(item => (
-        <Item 
+    const listedItem = this.state.inventory.map(item => (
+      <Item
         key={item.gundamId}
         id={item.gundamId}
-        image={item.image}
+        image={item.itemimage}
         price={item.price}
         itemName={item.name.toUpperCase()}
-        description={item.catagory}
-         />
+        description={item.description}
+      />
     ))
-        return (
-            <div className="App">
-              <Logo />
-              <SearchBar />
-              {listedItem}
-              <h2>random</h2>
-          </div>
-        )
-    }
+    return (
+      <div>
+        <h1 class='h1'>h1</h1>
+        {/* <Logo /> */}
+        <div class='homeDiv'>
+          <h1 class='h1'>h1</h1>
+          <h1 class='h1'>h1</h1>
+          {listedItem}
+
+        </div>
+      </div>
+    )
+  }
 }

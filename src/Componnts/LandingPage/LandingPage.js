@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import Header from './Header'
 import { Link } from "react-router-dom";
+import './landingpage.css'
 
 export default class LandingPage extends Component {
+
+    
+
     render() {
         return (
             <div>  
                 <Header />
-                <Link to={'/home'}>HOME</Link>
+                <Link to={'/home'}><button class="Button" >HOME</button></Link>
                 <br/>
-                <Link to={"/login"}>Login</Link>
-                <br/>
-                <Link to={"/sign-up"}>sign-Up</Link>
             </div>
         )
     }

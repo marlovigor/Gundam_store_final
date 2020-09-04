@@ -1,0 +1,25 @@
+/* 
+div{
+    
+} */
+
+.mainDiv{
+    background-color: rgb(130, 165, 193);
+}
+.image{
+    width:100px;
+}
+
+.cartContainerDiv{
+    border-color:rgb(247, 247, 247);
+    background-color: rgb(28, 67, 99);
+    border-style:solid;
+    border-radius: 15px;
+    border-width: 10px;
+    padding:15px;
+    margin:10px;
+    margin-bottom:20px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+}
+
