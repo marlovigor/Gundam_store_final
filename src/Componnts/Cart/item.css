@@ -1,0 +1,30 @@
+/* 
+div{
+    
+} */
+
+
+.innerDiv{
+    /* min-width:50%; */
+    border-style: solid;
+    border-color: red;
+}
+
+img{
+    max-width: 5em;
+    border-style: solid;
+    border-color: red;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: 0.2em;
+
+    
+}
+
+p{
+    font-size: 0.7em;
+    width: 220px;
+    text-align: center;
+}
