@@ -4,11 +4,10 @@ import './cartComponent.css'
 
 
 export default function Item(props) {
-    console.log(props.itemid)
     return (
         <div>
             <div class='innerDiv'>
-            <img class='image' src={props.image}/>
+            <img class='image' src={props.image} alt='gundam'/>
             <h1 class='name'>{props.name}</h1>
             <p class='discription'>Description:{props.description}</p>
              <p>Price:${props.price}USD</p>

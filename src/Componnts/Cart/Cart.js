@@ -16,23 +16,6 @@ class Cart extends Component {
         
     }
 
-    // componentDidMount() {
-    //     const userCart = this.context.currentUser.id
-    //     console.log(this.state.userCart)
-    //     if (userCart == undefined) {
-    //         this.context.forceLogIn()
-    //         // this.context.emptyCart()
-    //     } 
-    //      else {
-    //         fetch(`http://localhost:8000/cart/1`)
-    //             .then(response => response.json())
-    //             .then(data => console.log(data))
-    //         console.log('app mounted')
-
-    //     }
-    //     //if current user is undefinded send them back to login
-    // }
-
     componentDidMount() {
         const userCart = this.context.currentUser.id
             // console.log(this.state.userCart)
@@ -48,22 +31,13 @@ class Cart extends Component {
         }
         }
 
-    increase=(item)=>{
-        // // console.log(item)
-        // // const itemcount = this.state.cart.map( item =>{
-        // //     return item.itemcount
-        // // })
-        // const number = this.state.cart.itemcount
-        // let count = item
-        // this.setState({
-        //    number:count + 1
-        //  })
-    }
-
-    decrease=()=>{
-        // console.log(this.state.cart.itemcount)
-
-    }
+   DeleteCartItem = (cartId) => {
+    console.log('im fired')
+    this.setState({
+      ...this.state,
+      cart: this.state.cart.filter((cart) => cart.id !== +cartId),
+    });
+  };
 
 
    DeleteItem=(item)=>{
@@ -71,10 +45,8 @@ class Cart extends Component {
             method: 'DELETE',
             headers: { 'content-type': 'application/json' }
         })
-        .then(() => {
-            // value.deletNote(item);
-          })
-        // console.log()
+        .then(this.DeleteCartItem(item))
+        console.log(item)
         // console.log(item)
     }
 

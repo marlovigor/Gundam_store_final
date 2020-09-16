@@ -16,6 +16,7 @@ import { withRouter } from 'react-router'
 class App extends Component {
 
   state = {
+    showing: '',
     loggedIn:false,
     open:false,
     CartOpen:false, 
@@ -31,11 +32,14 @@ class App extends Component {
   }
 
 
-  // componentWillMount() {
-  //   this.setState({
-  //     carts:this.state.cart
-  //   })
-  // }
+LoginSucces=()=>{
+console.log('my boy')
+  let sucess= this.state.showing
+  sucess = 'none'
+this.setState({
+  showing:sucess
+})
+}
 
   componentDidMount() {
     fetch('http://localhost:8000/inventory')
@@ -52,35 +56,13 @@ class App extends Component {
 
   }
 
-  // openClose=(e)=>{
-    
-  //     this.setState({
-  //       open:!this.state.open
-  //     }) 
-    
-  // }
-  // openLogin=(e)=>{
-  //     this.setState({
-  //       loggedIn:!this.state.loggedIn
-  //     })
-    
-
-  // }
-
-  // activateLogin=(e)=>{
-  //   this.setState({
-  //     loggedIn:true
-  //   })
-
-  // }
-
-
-  // clodeButton=(e)=>{
-  //   this.setState({
-  //     open:false
-  //   })
-  // }
-
+  DeleteCartItem = (cartId) => {
+    console.log('im fired')
+    this.setState({
+      ...this.state,
+      cart: this.state.cart.filter((cart) => cart.id !== +cartId),
+    });
+  };
 
   getLoggedInUser = (user) => {
     fetch(`http://localhost:8000/users/${user}`)
@@ -162,7 +144,8 @@ class App extends Component {
     this.setState({ CartOpen: true });
   }
   closeCart=()=>{
-    this.setState({ CartOpen: false });
+    this.setState({ CartOpen: false },this.fetchCart);
+    
   }
   
 
@@ -196,8 +179,10 @@ class App extends Component {
       inventory: this.state.inventory,
       cart: this.state.cart,
       currentUser: this.state.LoggedInUser,
+      deleteCartItem: this.DeleteCartItem,
       getLoggedInUser: this.getLoggedInUser,
-      fetchCart:this.fetchCart
+      fetchCart:this.fetchCart,
+      LoginSucces:this.LoginSucces
     }
     // console.log(this.state.inventory)
     return (
@@ -214,13 +199,13 @@ class App extends Component {
              
               <div class='buttonDiv'>
               <div class='buttonInnerDiv'>
-              <button class='loginButton' onClick={this.openModal}>Login</button>
+              <button class='loginButton' style={{display: this.state.showing}}onClick={this.openModal}>Login</button>
               <button  class='cartButton' onClick={this.openCart}>cart</button>
               </div>
               </div>
               <Popup open={this.state.open}
           closeOnDocumentClick
-          onClose={this.closeModal} contentStyle={{width: "300px", borderRadius:'30px'}}  position="bottom center">
+          onClose={this.closeModal} contentStyle={{width: "300px", borderRadius:'30px',}}  position="bottom center">
                   <Login />
               </Popup>
                 <Popup open={this.state.CartOpen}
@@ -243,8 +228,8 @@ class App extends Component {
 }
 
 
-const modelWindow= {
-  backGroundColor:'grey',
-}
+// const modelWindow= {
+//   backGroundColor:'grey',
+// }
 
 export default withRouter(App)

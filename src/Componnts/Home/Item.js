@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Item(props) {
     return (
         <div class='itemContainer'>
-            <Link to={`/home/${props.id}`}><img class='images' src={props.image}/></Link>
+            <Link to={`/home/${props.id}`}><img class='images' src={props.image} alt='gundam'/></Link>
             <h1 class='itemName'>{props.itemName}</h1>
              <p >Price:${props.price}USD</p>
              {/* <button onClick={props.onClick}>add to cart</button> */}

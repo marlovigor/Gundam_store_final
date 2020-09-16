@@ -37,6 +37,7 @@ class LoginForm extends Component {
                     
                     this.context.closeModal()
                     this.context.getLoggedInUser(name.value)
+                    this.context.LoginSucces()
                     
 
                     // your not sending any datta to the main app state
@@ -46,6 +47,7 @@ class LoginForm extends Component {
                 }
 
             })
+            
     }
 
 

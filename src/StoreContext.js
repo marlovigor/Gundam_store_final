@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 
 
 
@@ -14,7 +14,8 @@ export const StoreContext = React.createContext({
     getLoggedInUser: () => { },
     forceLogIn: () => { },
     closeModal: () => { },
-    fetchCart: () => { }
+    deleteCartItem: () => { },
+    LoginSucces: () => { },
 });
 
 
