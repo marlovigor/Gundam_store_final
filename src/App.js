@@ -153,7 +153,7 @@ this.setState({
 
     
     const listedItem = this.state.inventory.map(item => (
-      <div class='homeItemDiv'>
+      <div className='homeItemDiv'>
         <Item
           key={item.id}
           id={item.id}
@@ -163,7 +163,7 @@ this.setState({
           description={item.description}
         // onClick={this.additem(item.id)}
         />
-        <button class='addButton' onClick={() => this.additem(item.id, item.numberofitems)}>additem</button>
+        <button className='addButton' onClick={() => this.additem(item.id, item.numberofitems)}>additem</button>
       </div>
     ))
 
@@ -197,10 +197,10 @@ this.setState({
             </Route>
             <Route path="/home" >
              
-              <div class='buttonDiv'>
-              <div class='buttonInnerDiv'>
-              <button class='loginButton' style={{display: this.state.showing}}onClick={this.openModal}>Login</button>
-              <button  class='cartButton' onClick={this.openCart}>cart</button>
+              <div className='buttonDiv'>
+              <div className='buttonInnerDiv'>
+              <button className='loginButton' style={{display: this.state.showing}}onClick={this.openModal}>Login</button>
+              <button  className='cartButton' onClick={this.openCart}>cart</button>
               </div>
               </div>
               <Popup open={this.state.open}
@@ -215,7 +215,7 @@ this.setState({
               </Popup>
               
               <Logo />
-              <div class='homeDiv'>
+              <div className='homeDiv'>
                 {listedItem}  
                 </div>
             </Route>

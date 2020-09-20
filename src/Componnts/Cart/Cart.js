@@ -19,7 +19,7 @@ class Cart extends Component {
     componentDidMount() {
         const userCart = this.context.currentUser.id
             // console.log(this.state.userCart)
-        if(userCart == undefined) {
+        if(userCart === undefined) {
             console.log(userCart)
             // this.context.forceLogIn()
             // this.context.emptyCart()
