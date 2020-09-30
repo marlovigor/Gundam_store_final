@@ -55,10 +55,12 @@ class LoginForm extends Component {
         return (
             <div class='loginContainer'>
                 <form onSubmit={this.handleSubmitAuth}>
-                    <input required name='name' type='text' placeholder='name'></input>
-                    <input required name='password' type='text' placeholder='password'></input><br/>
+                    <input required name='name' type='text' placeholder='name' ></input>
+                    <input required name='password' type='text' placeholder='password' ></input><br/>
                     <button>Login</button>
                 </form>
+                <h4>Enter  <br/> name: marlo <br/> password: password </h4>
+                <h4>or  <br/> name: Noob <br/> password: bo-password </h4>
             </div>
         )
     }
