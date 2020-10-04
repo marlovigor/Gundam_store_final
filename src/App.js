@@ -9,6 +9,7 @@ import { Route, Switch} from "react-router-dom";
 import { StoreContext } from './StoreContext'
 import Popup from "reactjs-popup";
 import { withRouter } from 'react-router'
+import {API_KEY} from './config'
 
 
 
@@ -151,6 +152,7 @@ this.setState({
 
   render() {
 
+    console.log(API_KEY)
     
     const listedItem = this.state.inventory.map(item => (
       <div className='homeItemDiv'>

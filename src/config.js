@@ -1,4 +1,7 @@
-export default {
-    API_ENDPOINT: 'http://localhost:8000/api',
-    TOKEN_KEY: 'ecom_key',
-  }
+require('dotenv').config()/// sudo code
+
+module.exports = {
+     API_KEY: process.env.REACT_APP_API_KEY,
+   }
+
+   console.log(process.env.REACT_APP_API_KEY)
