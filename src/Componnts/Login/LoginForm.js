@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import TokenService from '../../services/Token-services'
 import { StoreContext } from '../../StoreContext'
 import { withRouter } from 'react-router'
+import {API_KEY} from '../../config'
 import './login.css'
 
 class LoginForm extends Component {
@@ -22,7 +23,7 @@ class LoginForm extends Component {
         user.password = password.value
         e.preventDefault()
 
-        fetch('http://localhost:8000/api/auth/login', {
+        fetch(`${API_KEY}api/auth/login`, {
             method: 'POST',
             body: JSON.stringify(this.state.user),
             headers: { 'content-type': 'application/json' }

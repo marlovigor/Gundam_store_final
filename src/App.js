@@ -43,7 +43,7 @@ this.setState({
 }
 
   componentDidMount() {
-    fetch('http://localhost:8000/inventory')
+    fetch(`${API_KEY}inventory`)
       .then(response => response.json())
       .then(data => this.setState({ inventory: data }))  
   }
@@ -51,7 +51,7 @@ this.setState({
   fetchCart=()=>{
     const userid= this.state.LoggedInUser.id
     console.log(userid)
-    fetch(`http://localhost:8000/cart/${userid}`)
+    fetch(`${API_KEY}cart/${userid}`)
     .then(response => response.json())
     .then(data => this.setState({ cart: data.items }))
 
@@ -66,7 +66,7 @@ this.setState({
   };
 
   getLoggedInUser = (user) => {
-    fetch(`http://localhost:8000/users/${user}`)
+    fetch(`${API_KEY}users/${user}`)
       .then(response => response.json())
       .then(data => this.setState({ LoggedInUser: data.user }, this.fetchCart))
 
@@ -111,13 +111,13 @@ this.setState({
       alert('ITEM ALREADY EXIST IN CART CHOOSE ANOTHER')
 
     }  else {
-      fetch('http://localhost:8000/cart/', {
+      fetch(`${API_KEY}cart/`, {
         method: 'POST',
         body: JSON.stringify(this.state.addeditem),
         headers: { 'content-type': 'application/json' }
       })
       .then(this.fetchCart)
-      .then(  fetch(`http://localhost:8000/inventory/${item}`, {
+      .then(  fetch(`${API_KEY}inventory/${item}`, {
         method: 'PATCH',
         body: JSON.stringify({numberofitems:newNum}),
         headers: { 'content-type': 'application/json' }
@@ -150,10 +150,7 @@ this.setState({
   }
   
 
-  render() {
-
-    console.log(API_KEY)
-    
+  render() {    
     const listedItem = this.state.inventory.map(item => (
       <div className='homeItemDiv'>
         <Item
