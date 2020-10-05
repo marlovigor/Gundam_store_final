@@ -47,6 +47,10 @@ this.setState({
       .then(data => this.setState({ inventory: data }))  
   }
 
+
+
+  
+
   fetchCart=()=>{
     const userid= this.state.LoggedInUser.id
     console.log(userid)
@@ -71,17 +75,6 @@ this.setState({
 
   }
 
-//  patchCart=(item)=>{
-//    console.log('pacheted')
-//    console.log(item)
-//    console.log(this.state.numberofitems)
-//   fetch(`http://localhost:8000/inventory/${item}`, {
-//     method: 'PATCH',
-//     body: JSON.stringify({numberofitems:this.state.numberofitems}),
-//     headers: { 'content-type': 'application/json' }
-// })
-//   }
-
   additem = (item, num) => {
     const newNum = num-1
     const filteredItems = this.state.cart.map(item =>{
@@ -98,15 +91,12 @@ this.setState({
 
 
     })
-    // console.log(this.state.LoggedInUser.id)
-    // console.log(newAdddItem)
+
     if (newAdddItem.userid === undefined) {
       alert('login please')
 
     }
     else if (filteredItems.includes(newAdddItem.itemid)) {
-      // console.log(newAdddItem.itemid)
-      // console.log(this.state.cart.itemid)
       alert('ITEM ALREADY EXIST IN CART CHOOSE ANOTHER')
 
     }  else {
@@ -161,17 +151,13 @@ this.setState({
           price={item.price}
           itemName={item.name.toUpperCase()}
           description={item.description}
-        // onClick={this.additem(item.id)}
+        
         />
         <button className='addButton' onClick={() => this.additem(item.id, item.numberofitems)}>additem</button>
       </div>
     ))
 
 
-    // const decode = Base64.decode(window.localStorage.ecom_key)
-
-
-    // console.log(this.context.inventory)
     const appValue = {
       emptyCart:this.clodeButton,
       forceLogIn:this.activateLogin,
@@ -184,7 +170,7 @@ this.setState({
       fetchCart:this.fetchCart,
       LoginSucces:this.LoginSucces
     }
-    // console.log(this.state.inventory)
+
     return (
       <StoreContext.Provider value={appValue}>
         <div className="App">
@@ -228,8 +214,5 @@ this.setState({
 }
 
 
-// const modelWindow= {
-//   backGroundColor:'grey',
-// }
 
 export default withRouter(App)
