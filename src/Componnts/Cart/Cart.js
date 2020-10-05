@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { StoreContext } from '../../StoreContext'
 import Item from './Item'
+import {API_KEY} from '../../config'
 import { withRouter } from 'react-router'
 
 class Cart extends Component {
@@ -24,7 +25,7 @@ class Cart extends Component {
             // this.context.forceLogIn()
             // this.context.emptyCart()
         }  else {
-            fetch(`http://localhost:8000/cart/${userCart}`)
+            fetch(`${API_KEY}cart/${userCart}`)
                 .then(response => response.json())
                 .then(data => this.setState({ cart: data.items }))
             console.log('app mounted')
@@ -41,7 +42,7 @@ class Cart extends Component {
 
 
    DeleteItem=(item)=>{
-        fetch(`http://localhost:8000/cart/${item}`, {
+        fetch(`${API_KEY}cart/${item}`, {
             method: 'DELETE',
             headers: { 'content-type': 'application/json' }
         })
