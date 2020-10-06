@@ -23,7 +23,11 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 ### `screenshots`
 ![](public/Screensho1.png)
+
+<img src="public/Screensho2.png">
+
 ![](public/Screensho2.png)
+
 ![](public/Screensho3.png)
 
 
