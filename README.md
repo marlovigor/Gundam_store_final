@@ -24,11 +24,9 @@ Your app is ready to be deployed!
 ### `screenshots`
 ![](public/Screensho1.png)
 
-<img src="public/Screensho2.png">
+<img src="public/Screenshot2.png">
 
-![](public/Screensho3.png)
-
-![](public/Screensho3.png)
+![](public/Screenshot3.png)
 
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
