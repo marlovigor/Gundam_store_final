@@ -23,6 +23,8 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 ### `screenshots`
 ![](public/Screensho1.png)
+![](public/Screensho2.png)
+![](public/Screensho3.png)
 
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
