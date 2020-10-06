@@ -4,16 +4,19 @@ nteractive, scalable, 3D rendering of earth with nearby asteroids. Each asteroid
 
 ### `Motivation`
 
+### `Screenshot`
 
+
+<img src="public/Screensho1.png">
 
 <img src="public/Screenshot2.png">
 
 ![](public/Screenshot3.png)
 
 ### `built with`
-React
-Node
-Express
+React<br>
+Node<br>
+Express<br>
 Postgres
 
 
