@@ -30,8 +30,7 @@ class LoginForm extends Component {
         })
             .then(response => {
                 
-                if (response.status === 200) {
-                    console.log(response)                    
+                if (response.status === 200) {                
                     TokenService.saveAuthToken(
                         TokenService.makeBasicAuthToken(name.value, password.value)
                     )
@@ -44,7 +43,7 @@ class LoginForm extends Component {
                     // your not sending any datta to the main app state
                     // this.context.fetchCart()
                 } else if (response.status === 400) {
-                    console.log('wrong user')
+                    
                 }
 
             })

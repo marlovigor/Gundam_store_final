@@ -34,7 +34,7 @@ class App extends Component {
 
 
 LoginSucces=()=>{
-console.log('my boy')
+
   let sucess= this.state.showing
   sucess = 'none'
 this.setState({
@@ -54,7 +54,6 @@ this.setState({
 
   fetchCart=()=>{
     const userid= this.state.LoggedInUser.id
-    console.log(userid)
     fetch(`${API_KEY}cart/${userid}`)
     .then(response => response.json())
     .then(data => this.setState({ cart: data.items }))
@@ -113,8 +112,7 @@ this.setState({
         headers: { 'content-type': 'application/json' }
     }))
     
-    console.log(item)
-    console.log(newNum)
+  
    
 
 

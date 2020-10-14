@@ -21,19 +21,16 @@ class Cart extends Component {
         const userCart = this.context.currentUser.id
             // console.log(this.state.userCart)
         if(userCart === undefined) {
-            console.log(userCart)
             // this.context.forceLogIn()
             // this.context.emptyCart()
         }  else {
             fetch(`${API_KEY}cart/${userCart}`)
                 .then(response => response.json())
                 .then(data => this.setState({ cart: data.items }))
-            console.log('app mounted')
         }
         }
 
    DeleteCartItem = (cartId) => {
-    console.log('im fired')
     this.setState({
       ...this.state,
       cart: this.state.cart.filter((cart) => cart.id !== +cartId),
@@ -47,8 +44,7 @@ class Cart extends Component {
             headers: { 'content-type': 'application/json' }
         })
         .then(this.DeleteCartItem(item))
-        console.log(item)
-        // console.log(item)
+ 
     }
 
     // addcount=(item)=>{
@@ -64,7 +60,6 @@ class Cart extends Component {
     // }
 
     render() {
-        console.log(this.state.cart)
         const names = this.state.cart.map(item => {
             return (
                 <div class='cartContainerDiv'>
@@ -92,18 +87,6 @@ class Cart extends Component {
             
         })
 
-
-        // const product= this.context.cart.items
-        // const items = this.state.cart.map(item  => (
-        //       <Item
-        //       name={item.name}
-        //       image={item.itemimage}
-        //       description={item.description}
-        //       price={item.price}
-        //     />
-        //   ))
-        // if(items === undefined) return ''
-        console.log(this.state.cart)
         return (
             <div className='mainDiv'>
                 

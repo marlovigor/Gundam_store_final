@@ -19,4 +19,3 @@ export const StoreContext = React.createContext({
 });
 
 
-console.log("working")
