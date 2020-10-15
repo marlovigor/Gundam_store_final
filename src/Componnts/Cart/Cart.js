@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { StoreContext } from '../../StoreContext'
 import Item from './Item'
 import {API_KEY} from '../../config'
-import { withRouter } from 'react-router'
+
 
 class Cart extends Component {
 
@@ -19,7 +19,7 @@ class Cart extends Component {
 
     componentDidMount() {
         const userCart = this.context.currentUser.id
-            // console.log(this.state.userCart)
+            console.log(userCart)
         if(userCart === undefined) {
             // this.context.forceLogIn()
             // this.context.emptyCart()
@@ -101,4 +101,4 @@ class Cart extends Component {
     }
 }
 
-export default withRouter(Cart)
+export default Cart

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TokenService from '../../services/Token-services'
 import { StoreContext } from '../../StoreContext'
-import { withRouter } from 'react-router'
+// import { withRouter } from 'react-router'
 import {API_KEY} from '../../config'
 import './login.css'
 
@@ -66,4 +66,4 @@ class LoginForm extends Component {
     }
 }
 
-export default withRouter(LoginForm)
+export default LoginForm
