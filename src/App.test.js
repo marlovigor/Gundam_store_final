@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import Logo from './Componnts/Logo/Logo'
+import Cart from './Componnts/Cart/Cart'
 import Login from './Componnts/Login/LoginForm'
 import { render } from '@testing-library/react';
 import LandingPage from './Componnts/LandingPage/LandingPage';
@@ -10,6 +11,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 test('it renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Router />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+
+test('it renders Cart crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<Cart/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 
