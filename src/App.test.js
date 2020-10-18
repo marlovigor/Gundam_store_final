@@ -13,7 +13,7 @@ test('it renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-test('it renders Cart crashing', () => {
+test('it renders LandingPage crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<LandingPage/>, div);
   ReactDOM.unmountComponentAtNode(div);
@@ -31,4 +31,6 @@ test('it renders Login without crashing', () => {
   ReactDOM.render(<Login/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+
 
