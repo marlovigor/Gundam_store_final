@@ -17,7 +17,7 @@ class Cart extends Component {
         
     }
 
-    fetchCart() {
+    componentDidMount() {
         const userCart = this.context.currentUser.id
             console.log(userCart)
         if(userCart === undefined) {
